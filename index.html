@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <title>DrivenEats</title>
+</head>
+<body>
+    <div class="topo">
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </div>
+    <div class="menu">
+        <h1 class="titulo">Primeiro, seu prato</h1>
+        <div class="comidas">
+            <div class="row-comida comida" onclick="selectItem(this, 'comida')">
+                <img src="imagensEats/chickenalfredo.jpeg" alt="">
+                <div class="info">
+                    <h2>Fettuccine Alfredo</h2>
+                    <h3>Fettuccine ao molho branco com frango</h3>
+                    <p>R$ 14,90</p>
+                </div>
+            </div>
+            <div class="row-comida comida" onclick="selectItem(this, 'comida')">
+                <img src="imagensEats/steakandfries.jpeg" alt="">
+                <div class="info">
+                    <h2>Steak and Fries</h2>
+                    <h3>Picanha mal passada e batata frita</h3>
+                    <p>R$ 17,90</p>
+                </div>
+            </div>
+            <div class="row-comida comida" style="margin-right: 0px;" onclick="selectItem(this,'comida')">
+                <img src="imagensEats/smashburger.jpeg" alt="">
+                <div class="info">
+                    <h2>Smash Burgers</h2>
+                    <h3>Hamburgão ao molho barbecue e fritas</h3>
+                    <p>R$ 16,90</p>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="titulo">Agora, sua bebida</h1>
+        <div class="bebidas">
+            <div class="row-bebida bebida" onclick="selectItem(this, 'bebida')">
+                <img src="imagensEats/cocazero.jpeg" alt="">
+                <div class="info">
+                    <h2>Coca-Cola Zero</h2>
+                    <h3 class="h3margin">Lata 350ml</h3>
+                    <p class="pmargin">R$ 6,90</p>
+                </div>
+            </div>
+            <div class="row-bebida bebida" onclick="selectItem(this, 'bebida')">
+                <img src="imagensEats/download.jpeg" alt="">
+                <div class="info">
+                    <h2>Pepsi Zero</h2>
+                    <h3 class="h3margin">Lata 350ml</h3>
+                    <p class="pmargin">R$ 4,90</p>
+                </div>
+            </div>
+            <div class="row-bebida bebida" style="margin-right: 0px;" onclick="selectItem(this, 'bebida')">
+                <img src="imagensEats/ice tea.jpeg" alt="">
+                <div class="info">
+                    <h2>Ice Tea da casa</h2>
+                    <h3 class="h3margin">500ml</h3>
+                    <p class="pmargin">R$ 7,90</p>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="titulo">Por fim, sua sobremesa</h1>
+        <div class="sobremesas">
+            <div class="row-sobremesa sobremesa" onclick="selectItem(this)">
+                <img src="imagensEats/cremebrulee.jpeg" alt="">
+                <div class="info">
+                    <h2>Crème Brulée</h2>
+                    <h3 class="h3margin">Caramelizado na hora</h3>
+                    <p class="pmargin">R$ 7,90</p>
+                </div>
+            </div>
+            <div class="row-sobremesa sobremesa" onclick="selectItem(this, 'sobremesa')">
+                <img src="imagensEats/petitgateau.jpeg" alt="">
+                <div class="info">
+                    <h2>Petit Gâteau</h2>
+                    <h3 class="h3margin">Sabor chocolate</h3>
+                    <p class="pmargin">R$ 6,90</p>
+                </div>
+            </div>
+            <div class="row-sobremesa sobremesa" style="margin-right: 0px;" onclick="selectItem(this)">
+                <img src="imagensEats/brownie-de-chocolate.webp" alt="">
+                <div class="info">
+                    <h2>Brownie</h2>
+                    <h3 class="h3margin">Recheado com Nutella</h3>
+                    <p class="pmargin">R$ 4,90</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fecharPedido">
+        <div class="botaoFechar" disabled onclick="verificarPedido()">
+            <button>Selecione os 3 itens<br>para fechar o pedido</button>
+        </div>
+    </div>
+
+    <div id="info" class="informacao escondido">
+        <div class="confirmacao">
+            <h1 style="margin-bottom:25px;">Confirme seu pedido</h1>
+            <ul id="fecharPedido">
+            </ul>
+            <p id="total-pedido" style="margin-top: 12px"><strong>Total: R$ 0,00</strong></p> 
+            <a href="#" class="confirmar-pedido" style="margin-top: 20px;" onclick="confirmarPedido()">Tudo certo, pode pedir!</a>
+            <button class="cancelar-botao" onclick="cancelarPedido()">Cancelar pedido</button> 
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
