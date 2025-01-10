@@ -17,7 +17,7 @@ function verificarPedido() {
         botao.classList.remove("desabilitado");
         botao.classList.add("habilitado");
         botao.innerHTML = "Fechar pedido";
-        botao.onclick = fecharPedido();
+        botao.onclick = fecharPedido;
     } else {
         botao.disabled = true;
         botao.classList.remove("habilitado");
